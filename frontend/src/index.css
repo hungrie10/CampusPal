@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+}
+
+/* 🔹 Card */
+.login-container .login-box {
+  width: 70%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 🔹 Logo */
+.login-container .login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container .login-header img {
+  width: calc(340px);
+}
+
+/* 🔹 Form */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Title */
+.login-container h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Inputs */
+.login-container input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+/* Focus effect */
+.login-container input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+/* Button */
+.login-container button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #1f2937;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover = more power */
+.login-container button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5);
+}
+
+/* Active click */
+.login-container button:active {
+  transform: scale(0.98);
+}
+
+/* ✨ Shine effect */
+.login-container button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.login-container button:hover::before {
+  left: 100%;
+}
+
+/* Error */
+.login-container .error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+#sign_up_link {
+  color: #f59e0b;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+#sign_up_link:hover {
+  text-decoration: underline;
+}
+
+/* Login Form Responsive */
+@media (max-width: 800px) {
+  .login-container .login-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
