@@ -31,7 +31,7 @@ function Login() {
     try {
       setError("");
 
-      const res = await fetch("http://localhost:3000/login", {
+      const res = await fetch("http://localhost:4500/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       // 👉 redirect later (optional)
-      // window.location.href = "/dashboard";
+      window.location.href = "/dashboard";
     } catch (err) {
       if (err) setError("Network error. Please try again.");
     }
@@ -100,7 +100,7 @@ function Login() {
         </div>
       </div>
         <br />
-                  <span>Don't have an account yet? <a href="/sign_up" id="sign_up_link">Sign Up Now</a></span>
+                  <span id="sign_up_text">Don't have an account yet? <a href="/sign_up" id="sign_up_link">Sign Up Now</a></span>
     </main>
   );
 }
