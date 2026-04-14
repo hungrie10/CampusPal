@@ -770,3 +770,7 @@ footer nav ul li a:hover svg {
   background: #facc15;
   color: #000000;
 }
+
+#note_a_voice_page{
+  padding: 1%;
+}

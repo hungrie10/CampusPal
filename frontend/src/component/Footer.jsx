@@ -20,10 +20,6 @@ function Footer() {
                                 <FontAwesomeIcon icon={faWalkieTalkie} />
                                 <span>Note A Voice</span>
                           </Link></li>
-                          <li><Link to="/note-a-voice">
-                                <FontAwesomeIcon icon={faGear} />
-                                <span>Settings</span>
-                          </Link></li>
                       </ul>
                   </nav>
               </footer>

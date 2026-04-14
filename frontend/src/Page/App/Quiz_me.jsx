@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../component/Footer";
+import Header from "../../component/Header";
+
 
 function Quiz_me() {
   const [quiz, setQuiz] = useState(null);
@@ -86,6 +88,7 @@ const handleUpload = async () => {
 
   return (
     <main id="quiz_me_page">
+      <Header />
       <section id="upload_my_work">
         <div id="upload_instructions">
           <h2>Upload My Work</h2>
