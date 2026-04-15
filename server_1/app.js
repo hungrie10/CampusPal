@@ -7,13 +7,13 @@ require("dotenv").config();
 const app = express();
 const port = 4500;
 
-const corsOptions = {
-  origins: "http://localhost:5173/",
-  methods: "GET,POST",
-  optionsSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origins: "http://localhost:5173/",
+//   methods: "GET,POST",
+//   optionsSuccessStatus: 200,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.use("/", router);

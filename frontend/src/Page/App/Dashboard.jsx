@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHomeUser } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import { faVoicemail } from "@fortawesome/free-solid-svg-icons";
@@ -11,14 +11,13 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import slides from "./msg";
-
+import data from "./index";
 
 function Dashboard() {
   const my_slide = useRef(null);
+  let [dt, setDt] = useState(data);
 
   const [currentSlide, setCurrentSlide] = useState(1);
-
-  console["log"](localStorage.getItem("token"));
 
   function change_slide(slideNumber) {
     setCurrentSlide(slideNumber);
@@ -50,14 +49,12 @@ function Dashboard() {
 
   return (
     <main id="dashboard_page">
-      
       <Header />
 
       {/* Dashboard Title */}
       <section id="title">
         <div id="title_name">
           <h2>Dashboard</h2>
-          
         </div>
 
         <div id="title_filter">
@@ -84,12 +81,42 @@ function Dashboard() {
         {render_new_msg()}
       </section>
 
-          <section id="about_campus_pal">
+      <section id="about_campus_pal">
         <h2>About Campus Pal</h2>
-        <p>Campus Pal is a revolutionary platform designed to enhance the student experience on college campuses. </p>
-          </section>
-          
-          <Footer />
+        <p>
+          Campus Pal is a revolutionary platform designed to enhance the student
+          experience on college campuses.{" "}
+        </p>
+      </section>
+
+      <section id="extList">
+        {dt.map((i) => {
+          let { name, description, isActive, logo, id } = i;
+
+          return (
+            <div className="extensions">
+              <div className="extDets">
+                <div className="extLogo">
+
+                  <div className="extInfo">
+                    <h1>{name}</h1>
+                    <p>{description}</p>
+                  </div>
+                </div>
+                
+                <br />
+
+                <div className="extControls">
+                  <button className="remove">Remove</button>
+                  {/* <button className="remove">Remove</button> */}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </section>
+
+      <Footer />
     </main>
   );
 }
