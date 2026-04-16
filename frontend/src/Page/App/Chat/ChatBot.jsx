@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressBook, faGlassWater, faGroupArrowsRotate, faHome, faMehRollingEyes, faNoteSticky, faRobot, faUserFriends, faVolume,faMessage } from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook, faRobot, faUserFriends, faPlaneCircleCheck, faGroupArrowsRotate } from '@fortawesome/free-solid-svg-icons'
 
 function ChatBot() {
   return (
@@ -42,17 +42,24 @@ function ChatBot() {
         </div>
       </aside>
       <section id="main_chat">
-        {/* <header></header> */}
         <div>
           <img src={"https://i.pinimg.com/736x/88/9b/ff/889bfffc6af09bd6730405cf7b9c547e.jpg"} alt="" />
-          <h1>Hello! Welcome to Chatter</h1>
+          <h1>Hello! Welcome to Chatter 👋</h1>
           <h2>Let's be Friends!</h2>
+
+          <div id='message_box'>
+            <div className='message_bubble'>
+            <small>Bayne</small>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veniam doloremque tempore quidem odit autem cupiditate earum magnam eius laudantium?</p>
+              </div>
+            
+          </div>
             </div>
 
-        <div>
-          <input type="text" />
+        <div id='chat_panel'>
+          <input type="text" placeholder='What do you want to talk about ?' />
           <span>
-            <button><FontAwesomeIcon icon={faMessage} /></button>
+            <button><FontAwesomeIcon icon={faPlaneCircleCheck} /></button>
           </span>
         </div>
       </section>

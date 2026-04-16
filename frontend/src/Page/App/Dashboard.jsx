@@ -15,7 +15,7 @@ import data from "./index";
 
 function Dashboard() {
   const my_slide = useRef(null);
-  let [dt, setDt] = useState(data);
+  let dt = data;
 
   const [currentSlide, setCurrentSlide] = useState(1);
 

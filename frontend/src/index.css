@@ -968,12 +968,14 @@ nav ul li:hover {
 
 /* MAIN CHAT */
 #main_chat {
+  position: relative;
   width: 80%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3vh 2%;
+  overflow: scroll;
 }
 
 /* WELCOME */
@@ -1009,6 +1011,7 @@ nav ul li:hover {
 
 #main_chat input {
   width: 85%;
+  position: ;
   padding: 1.5vh;
   border-radius: 1vh;
   border: 1px solid #ccc;
@@ -1030,6 +1033,35 @@ nav ul li:hover {
 
 #main_chat button:hover {
   background: #1d4ed8;
+}
+
+#message_box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.71);
+  border: solid rgba(255, 255, 255, 0) 2px;
+  max-height: fit-content;
+  height:  200px;
+  margin-bottom: 30px;
+}
+
+.message_bubble small{
+  color: rgba(255, 255, 255, 0.737);
+}
+
+.message_bubble{
+  text-align: left;
+  padding: 15px;
+  /* border: solid; */
+  background: linear-gradient(-45deg , rgb(1, 1, 69));
+  border-radius: 0.25rem;
+}
+
+#chat_panel{
+  position: fixed;
+  top: 0;
 }
 
 @media (max-width: 768px) {
