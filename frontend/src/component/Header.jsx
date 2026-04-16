@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import my_name from "./my_info";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeadphonesAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [user, setUser] = useState(null);
@@ -72,13 +74,9 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Info</Link>
+            <Link to="/chat_with_bayne">
+              <FontAwesomeIcon icon={faHeadphonesAlt} />
+            </Link>
           </li>
         </ul>
       </nav>

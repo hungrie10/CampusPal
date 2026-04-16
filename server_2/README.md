@@ -25,9 +25,8 @@ It acts as the backend engine that:
 - 🔄 Real-time chat using sockets  
 - 🤖 AI-powered responses via Gemini  
 - 👥 Multi-user support (optional rooms)  
-- 💾 Chat history storage (optional)  
-- 🔐 Authentication support (JWT-based)  
-- 📄 File upload support (PDF parsing, if implemented)  
+- 💾 Chat history storage (optional)
+- 📄 File upload support (PDF parsing)  
 
 ---
 
@@ -62,7 +61,7 @@ server/
 ## 🔁 Socket Events
 
 | Event Name         | Description |
-|----|-----|
+|-|-|
 | `connection`      | Triggered when a user connects |
 | `send_message`    | User sends a message |
 | `receive_message` | Server sends AI response |
@@ -70,3 +69,4 @@ server/
 
 ---
 
+# CampusPal

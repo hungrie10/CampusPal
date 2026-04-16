@@ -5,6 +5,7 @@ import SignUp from './Page/SignUp';
 import Dashboard from './Page/App/Dashboard';
 import Quiz_me from './Page/App/Quiz_me';
 import Note_A_Voice from './Page/App/Note_A_Voice';
+import ChatBot from './Page/App/Chat/ChatBot';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       <Route path="/quiz_me" element={<Quiz_me />} />
       <Route path="/note-a-voice" element={<Note_A_Voice />} />
 
+
+        {/* This part works with ChatBot */}
+      <Route path="/chat_with_bayne" element={<ChatBot />} />
     </Routes>
   )
 }
